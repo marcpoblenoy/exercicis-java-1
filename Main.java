@@ -1,12 +1,48 @@
-import java.util.Map;
 import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
+public class Testing {
+//        8. Llegeix un nombre enter d’hores, minuts i segons i escriu el nombre de segons
+//         equivalents.
+    public static int segonsDeHorasMinutosSegundo(int horas, int minutos, int segundos) {
+        return segundos + (minutos * 60) + (horas * 36000);
 
+
+    }
+
+    public static void HorasMinutosSegundosDesegundos(int segundos){
+        horasTotales = segundos / 3600;
+    }
 
     public static void main(String[] args) {
+
+        System.exit(0);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         Scanner sc = new Scanner(System.in);
@@ -36,17 +72,59 @@ public class Main {
         double area = Math.PI * (Math.pow(radioInp, 2));
         // P = π ⋅ r2
 
-        System.out.print("perimetro: " + perimetro + "\n" + "area: " + area);
+        System.out.println("perimetro: " + perimetro + "\n" + "area: " + area);
 
 //        4. Llegeix tres nombres reals i troba la seva mitja aritmètica.
 
         int aritmetica1 = sc.nextInt();
+        int aritmetica2 = sc.nextInt();
+        int aritmetica3 = sc.nextInt();
+
+        int media = (aritmetica1 + aritmetica2 + aritmetica3) / 3;
+
+        System.out.println(String.format("la media es de: %d", media));
+
 
 //        5. Llegeix la base i l'altura d'un triangle i escriu la seva àrea.
+//        (base altura) / 2
+
+        int baseTriangulo = sc.nextInt();
+        int areaTriangulo = baseTriangulo / 2;
+        System.out.println(areaTriangulo);
+
+
 //        6. Llegeix el preu d'un producte, l'IVA (en %) i el descompte (en %) a aplicar. Escriu el
 //        preu final del producte.
+        System.out.print("porcentaje del del iva: ");
+        float iva = sc.nextFloat();
+
+        sc.nextLine(); // pongo este debufer por estetica de donde pongo el input
+
+        System.out.print("pon tu descuento");
+        float descuento = sc.nextFloat();
+
+        sc.nextLine();
+
+        System.out.print("precio de producto: ");
+        float precio = sc.nextFloat();
+
+        descuento = (descuento / 100);
+        iva = ((iva / 100) + 1);
+
+        float result = ((precio * descuento) * iva);
+
+        System.out.println(result);
+
+
 //        7. Calcula l'àrea lateral i el volum d'un cilindre recte, introduint per teclat els valors del
 //        radi i l'altura. V =PI⋅r²⋅h AL=2⋅PI⋅r⋅h
+        double height = sc.nextFloat();
+        double radioExSeven = sc.nextFloat();
+//        PI⋅r²⋅h
+        double al = 2 * Math.PI * radioExSeven * height;
+        double v = Math.pow(radioExSeven, height) * height;
+
+        System.out.println(String.format("Area lateral: %,.2f| volum: %,.2f", al, v));
 //        8. Llegeix un nombre enter d’hores, minuts i segons i escriu el nombre de segons
 //        equivalents.
 //        9. Llegeix un nombre enter de segons i escriu el nombre d’hores, minuts i segons
@@ -111,4 +189,6 @@ public class Main {
 //        24. Codifica un programa que donats tres enters que representen hores, minuts i
 //        segons, sumi un segon i doni el resultat en el mateix format.
     }
+
+
 }
